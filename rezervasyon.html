@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restoran Websitesi</title>
+  <title>Rezervasyon</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Hoş Geldiniz!</h1>
+    <h1>Rezervasyon</h1>
     <nav>
       <ul>
         <li><a href="index.html">Anasayfa</a></li>
@@ -19,57 +19,25 @@
     </nav>
   </header>
 
-  <section id="menu">
-    <h2>Menü</h2>
-    <div class="menu-kategori">
-      <h3>Başlangıçlar</h3>
-      <div class="menu-item">
-        <h4>Çorba</h4>
-        <p>Mercimek çorbası</p>
-        <p>Fiyat: ₺15</p>
-      </div>
-      <div class="menu-item">
-        <h4>Salata</h4>
-        <p>Çoban salata</p>
-        <p>Fiyat: ₺20</p>
-      </div>
-    </div>
-    <div class="menu-kategori">
-      <h3>Ana Yemekler</h3>
-      <div class="menu-item">
-        <h4>Kebap</h4>
-        <p>Adana kebap</p>
-        <p>Fiyat: ₺50</p>
-      </div>
-      <div class="menu-item">
-        <h4>Izgara</h4>
-        <p>Biftek</p>
-        <p>Fiyat: ₺60</p>
-      </div>
-    </div>
-  </section>
   <section id="rezervasyon">
     <h2>Randevu Al</h2>
     <form id="rezervasyon-formu">
       <label for="isim">İsim:</label>
       <input type="text" id="isim" name="isim" required>
-  
+
       <label for="email">E-posta:</label>
       <input type="email" id="email" name="email" required>
-  
+
       <label for="tarih">Tarih:</label>
       <input type="date" id="tarih" name="tarih" required>
-  
+
       <label for="kisi">Kişi Sayısı:</label>
       <input type="number" id="kisi" name="kisi" min="1" required>
-  
+
       <button type="submit">Randevu Al</button>
     </form>
     <p id="tesekkur-mesaji" style="display: none;">Rezervasyonunuz alındı! Teşekkür ederiz.</p>
   </section>
-  <footer>
-    <p>İletişim: info@restoran.com | Tel: 0123 456 78 90</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>

@@ -1,19 +1,26 @@
+:root {
+  --primary-color: #ff6f61; /* Ana renk */
+  --secondary-color: #333; /* İkincil renk */
+  --background-color: #f9f9f9; /* Arka plan rengi */
+  --text-color: #333; /* Metin rengi */
+  --light-text-color: #fff; /* Açık metin rengi */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
   
   nav ul {
     list-style: none;
@@ -28,7 +35,7 @@ body {
   }
   
   nav ul li a {
-    color: #fff;
+    color: var(--light-text-color);
     text-decoration: none;
     font-weight: bold;
     padding: 5px 10px;
@@ -36,20 +43,16 @@ body {
     transition: background-color 0.3s ease;
   }
   nav ul li a:hover {
-    background-color: #555;
-  }
+    background-color: rgba(255, 255, 255, 0.2);  }
   
   #menu {
     padding: 20px;
   }
   
   .menu-item {
-    background-color: #fff;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+
   .menu-item img {
     width: 100%;
     max-width: 300px;
@@ -68,9 +71,10 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
+  
   .menu-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
   
   @keyframes fadeIn {
@@ -124,4 +128,14 @@ body {
       margin: 10px 0;
       text-align: center;
     }
+  }
+  .menu-kategori {
+    margin-bottom: 30px;
+  }
+  
+  .menu-kategori h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
   }
