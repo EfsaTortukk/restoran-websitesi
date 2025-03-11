@@ -8,23 +8,35 @@ body {
   header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   
   nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
   }
   
   nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
   }
   
   nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  nav ul li a:hover {
+    background-color: #555;
   }
   
   #menu {
@@ -38,7 +50,11 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-  
+  .menu-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+  }
   footer {
     background-color: #333;
     color: #fff;
@@ -47,4 +63,65 @@ body {
     position: fixed;
     width: 100%;
     bottom: 0;
+  }
+  .menu-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  header, #menu, #rezervasyon, #iletisim {
+    animation: fadeIn 1s ease-in-out;
+  }
+  @media (max-width: 768px) {
+    nav ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .menu-item {
+      margin: 20px 0;
+    }
+  
+    footer {
+      position: static;
+    }
+  }
+  #hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    #hamburger-menu {
+      display: block;
+    }
+  
+    #nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+  
+    #nav-links.active {
+      display: flex;
+    }
+  
+    #nav-links li {
+      margin: 10px 0;
+      text-align: center;
+    }
   }
